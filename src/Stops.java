@@ -19,6 +19,14 @@ public class Stops {
 	public void setDate(Integer date){
 		this.date = date;
 	}
+	
+	/**
+	 * get date
+	 * @return date
+	 */
+	public Integer getDate(){
+		return this.date;
+	}
 	/**
 	 * Add a stop request
 	 * @param stop stop location
