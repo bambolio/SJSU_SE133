@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Member {
-	private short status;
+	private int status;
 	private String address;
 	private ArrayList<String> vehicles;
 	private int preference; //multiple preferences can be bits
@@ -15,7 +15,7 @@ public class Member {
 	 * Set Status of Member
 	 * @param status 0 none, 1 passenger, 2 driver, 3 both
 	 */
-	public void setStatus(short status){
+	public void setStatus(int status){
 		this.status = status;
 	}
 	
@@ -46,7 +46,7 @@ public class Member {
 	 * Get Status of member
 	 * @return status
 	 */
-	public short getStatus(){
+	public int getStatus(){
 		return this.status;
 	}
 	
