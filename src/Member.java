@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Member {
-	private boolean status;
+	private short status;
 	private String address;
 	private ArrayList<String> vehicles;
 	private int preference; //multiple preferences can be bits
@@ -13,9 +13,9 @@ public class Member {
 	
 	/**
 	 * Set Status of Member
-	 * @param status True - needs pick up, False - no action
+	 * @param status 0 none, 1 passenger, 2 driver, 3 both
 	 */
-	public void setStatus(boolean status){
+	public void setStatus(short status){
 		this.status = status;
 	}
 	
@@ -46,7 +46,7 @@ public class Member {
 	 * Get Status of member
 	 * @return status
 	 */
-	public boolean getStatus(){
+	public short getStatus(){
 		return this.status;
 	}
 	
