@@ -5,6 +5,7 @@ public class Vehicle {
 	private String color;
 	private int parkingNumber;
 	private String licensePlate;
+	//private Boolean isVerified;
 	//private Boolean isOperating;
 
 	/**
