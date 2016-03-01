@@ -3,6 +3,7 @@ public class ScoopUp {
 	public static void main(String [] args){
 		int[] departures = null;
 		int[] arrivals = null;
+		Integer currentDate = 3/1/16;
 		
 		// Add a Driver
 		Member Tim = new Member();
@@ -22,13 +23,16 @@ public class ScoopUp {
 		arrivals[4] = 1200;
 		
 		// Set Drivers location
-		RideSchedule TimsLocation = new RideSchedule();
-		TimsLocation.setLocation(TimsLocation.getLocation());
+//		RideSchedule TimsLocation = new RideSchedule();
+//		TimsLocation.setLocation(TimsLocation.getLocation());
 		
 		// Set Drivers schedule
 		MemberSchedule TimsSchedule = new MemberSchedule(arrivals, departures);
 		TimsSchedule.setDeparture(departures);
 		TimsSchedule.setArrival(arrivals);
+		
+		// Drivers route
+		RideSchedule timsRoute = new RideSchedule();
 		
 		// Add a Passenger
 		Member Jack = new Member();
@@ -46,18 +50,28 @@ public class ScoopUp {
 		arrivals[3] = 900;
 		arrivals[4] = 1200;
 		
-		// Set Passengers location
-		RideSchedule JacksLocation = new RideSchedule();
-		JacksLocation.setLocation(JacksLocation.getLocation());
-		
 		// Set Passengers schedule
 		MemberSchedule JacksSchedule = new MemberSchedule(arrivals, departures);
 		JacksSchedule.setDeparture(departures);
 		JacksSchedule.setArrival(arrivals);
 		
-		// Book a ride
-	
-	
+		// Set Passengers location
+		RideSchedule JacksLocation = new RideSchedule();
+		JacksLocation.setLocation(JacksLocation.getLocation());
+		
+		// set a stop on route - book a ride
+		JacksLocation.addNewStop(0, JacksLocation.getLocation(), 830); // add a new stop to the schedule
+
+		// Set route
+		Stops route = new Stops(0);
+		route.addStop(JacksLocation.getLocation(), 830);
+		JacksLocation.addNewStop(0, JacksLocation.getLocation(), 830);
+		
+		//Receive directions
+		
+		while (currentDate == route.getDate()) {
+			
+		}
 	
 	}
 }
