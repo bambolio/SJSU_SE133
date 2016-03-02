@@ -1,63 +1,52 @@
+import java.util.Scanner;
+
 public class ScoopUp {
 
 	public static void main(String [] args){
-		int[] departures = null;
-		int[] arrivals = null;
+
+		int option;
 		
-		// Add a Driver
-		Member Tim = new Member();
-		Tim.setStatus(2);
-		Tim.setAddress("1313 Like Ln San Jose CA");
-		Tim.addVehicle("2010 Audi A4");
-		Tim.setPreference(0);
-		departures[0] = 800;
-		departures[1]  = 800;
-		departures[2] = 800;
-		departures[3]  = 800;
-		departures[4] = 1100;
-		arrivals[0] = 900;
-		arrivals[1] = 900;
-		arrivals[2] = 900;
-		arrivals[3] = 900;
-		arrivals[4] = 1200;
+		Scanner in = new Scanner(System.in);
 		
-		// Set Drivers location
-		RideSchedule TimsLocation = new RideSchedule();
-		TimsLocation.setLocation(TimsLocation.getLocation());
+		System.out.println("***Welcome to ScoopUp*** /nPress 1 to Sign Up /nPress 2 to Sign In /nPress 3 to Exit");
+		option = in.nextInt();
 		
-		// Set Drivers schedule
-		MemberSchedule TimsSchedule = new MemberSchedule(arrivals, departures);
-		TimsSchedule.setDeparture(departures);
-		TimsSchedule.setArrival(arrivals);
+		if (option > 3 || option < 1) {
+			System.out.println("Invalid input. Try again");
+		}
 		
-		// Add a Passenger
-		Member Jack = new Member();
-		Jack.setStatus(1);
-		Jack.setAddress("636 Milky Way Ln San Jose CA");
-		Jack.setPreference(0);
-		departures[0] = 830;
-		departures[1]  = 830;
-		departures[2] = 830;
-		departures[3]  = 830;
-		departures[4] = 1130;
-		arrivals[0] = 900;
-		arrivals[1] = 900;
-		arrivals[2] = 900;
-		arrivals[3] = 900;
-		arrivals[4] = 1200;
+		if (option == 1) {
+			Member newMember = new Member();
+			System.out.println("***Sign Up*** /nEnter your email address: ");
+			newMember.setUsername(in.next());
+			System.out.println("Enter your password: ");
+			in.next();
+			newMember.setPassword(in.next());
+			System.out.println("/n/nPress 1 to Sign Up as Driver /nPress 2 to Sign Up as Passenger");
+			option = in.nextInt();
+			if (option > 2 || option < 1) {
+				System.out.println("Invalid input. Try again");
+			}
+			
+			if (option == 1){
+				in.next();
+				System.out.println("***Create Driver's Profile*** /nEnter first name: ");
+				newMember.setFirstName(in.next());
+				System.out.println("Enter last name: ");
+				newMember.setLastName(in.next());
+				System.out.println("Enter cell number: ");
+				newMember.setCellNumber(in.next());
+				System.out.println("Enter home address: ");
+				newMember.setAddress(in.next());
+			}
+			
+		}
+		if (option == 2) {
+			
+		}
+		if (option == 3) {
+			
+		}
 		
-		// Set Passengers location
-		RideSchedule JacksLocation = new RideSchedule();
-		JacksLocation.setLocation(JacksLocation.getLocation());
-		
-		// Set Passengers schedule
-		MemberSchedule JacksSchedule = new MemberSchedule(arrivals, departures);
-		JacksSchedule.setDeparture(departures);
-		JacksSchedule.setArrival(arrivals);
-		
-		// Book a ride
-	
-	
-	
 	}
 }
