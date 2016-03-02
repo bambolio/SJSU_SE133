@@ -11,7 +11,7 @@ public class Member {
 	private String firstName;
 	private String lastName;
 	private String cellNumber;
-	
+	private String licenseNumber;
 	
 	public Member(){
 		
@@ -148,6 +148,18 @@ public class Member {
 	 */
 	public void addVehicle(String vehicle){
 		this.vehicles.add(vehicle);
+	}
+	/**
+	 * @return the licenseNumber
+	 */
+	public String getLicenseNumber() {
+		return licenseNumber;
+	}
+	/**
+	 * @param licenseNumber the licenseNumber to set
+	 */
+	public void setLicenseNumber(String licenseNumber) {
+		this.licenseNumber = licenseNumber;
 	}
 	
 

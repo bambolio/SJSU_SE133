@@ -3,6 +3,7 @@ public class Vehicle {
 	private String make;
 	private String model;
 	private String color;
+	private int seatNumber;
 	private int parkingNumber;
 	private String licensePlate;
 	//private Boolean isVerified;
@@ -114,6 +115,20 @@ public class Vehicle {
 	 */
 	public void setLicensePlate(String licensePlate) {
 		this.licensePlate = licensePlate;
+	}
+
+	/**
+	 * @return the seatNumber
+	 */
+	public int getSeatNumber() {
+		return seatNumber;
+	}
+
+	/**
+	 * @param seatNumber the seatNumber to set
+	 */
+	public void setSeatNumber(int seatNumber) {
+		this.seatNumber = seatNumber;
 	}
 
 }
