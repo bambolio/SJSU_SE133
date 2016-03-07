@@ -6,7 +6,7 @@ public class Member {
 	private String password;
 	private int status;
 	private String address;
-	private ArrayList<String> vehicles;
+	private String vehicles;
 	private int preference; //multiple preferences can be bits
 	private String firstName;
 	private String lastName;
@@ -95,13 +95,7 @@ public class Member {
 		this.address = addr;
 	}
 	
-	/**
-	 * Copy vehicles over into list of vehicles
-	 * @param vehicles Initialize Vehicles
-	 */
-	public void setVehicles(ArrayList<String> vehicles){
-		Collections.copy(this.vehicles, vehicles);
-	}
+	
 	
 	/**
 	 * Member's preference set
@@ -126,13 +120,7 @@ public class Member {
 		return address;
 	}
 	
-	/**
-	 * List of vehicles owned by member
-	 * @return a list of vehicles
-	 */
-	public ArrayList<String> getVehicles(){
-		return vehicles;
-	}
+	
 	
 	/**
 	 * Preference of member
@@ -142,13 +130,7 @@ public class Member {
 		return this.preference;
 	}
 	
-	/**
-	 * Add new vehicle to list
-	 * @param vehicle vehicle to be added
-	 */
-	public void addVehicle(String vehicle){
-		this.vehicles.add(vehicle);
-	}
+	
 	/**
 	 * @return the licenseNumber
 	 */
@@ -160,6 +142,18 @@ public class Member {
 	 */
 	public void setLicenseNumber(String licenseNumber) {
 		this.licenseNumber = licenseNumber;
+	}
+	/**
+	 * @return the vehicles
+	 */
+	public String getVehicles() {
+		return vehicles;
+	}
+	/**
+	 * @param vehicles the vehicles to set
+	 */
+	public void setVehicles(String vehicles) {
+		this.vehicles = vehicles;
 	}
 	
 

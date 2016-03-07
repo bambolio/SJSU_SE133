@@ -1,9 +1,17 @@
 import java.util.HashMap;
+import java.util.List;
 
 public class Stops {
 	private Integer date;
-	private HashMap<String, Integer> stops;
+	private HashMap<String, List<Integer> > stops;
 
+	/**
+	 * Empty Construction
+	 */
+	public Stops(){
+		
+	}
+	
 	/**
 	 *  Constructor
 	 *  @param date to be picked up
