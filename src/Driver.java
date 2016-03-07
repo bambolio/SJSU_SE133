@@ -1,3 +1,4 @@
+import java.awt.List;
 import java.util.ArrayList;
 
 public class Driver {
@@ -17,11 +18,12 @@ public class Driver {
 
 
 
-	public Driver(boolean leftHome, double locationX, double locationY, ArrayList<Driver> drivers) {
+	public Driver(String name , boolean leftHome, double locationX, double locationY) {
 		super();
 		this.leftHome = leftHome;
 		this.locationX = locationX;
 		this.locationY = locationY;
+		this.name = name ;
 		drivers.add(this);
 	}
 
