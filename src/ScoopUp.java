@@ -1,57 +1,55 @@
 
 		
-	     
-	     
-//	     Driver driver1 = new Driver(false,-121.9092602 ,37.3451916 ); // north
-//	     Driver driver2 = new Driver(false,-121.8292602 ,37.3451916 ); // south
-//	     Driver driver3 = new Driver(false,-121.8892602 ,37.3651916 ); //east 
-//	     Driver driver4 = new Driver(false,-121.8892602 ,37.3151916 ); //west
-//	     
-//	     System.out.println( " Arraylist size is : " + Driver.drivers.size() );
-//	     System.out.println(driver1.getLocationX());
-//	     System.out.println(driver2.getLocationX());
-//	     System.out.println(driver3.getLocationX());
-//	     System.out.println(driver4.getLocationX());
+/*
+ * to test this program :
+ *    -121.9232602  < X < -121.8432602
+ *     37.2951916 < Y < 37.3751916
+ *     
+ *     basically center +- .04 
+ */
 	     
 
-		/////////////////////////////////////////
-	     import java.util.Scanner;
+		/////////////////////////////////////////  CENTER =  -121.8832602,  37.3351916, SJSU X , Y  //////////////////////////////////////
+	     import java.util.Calendar;
+import java.util.Scanner;
 
 	     public class ScoopUp 
 	     {
+	    
+	    	 
+	    	 
 	     	public static void main(String [] args)
 	     	{
 	     		int[] departures = new int[10];
 	     		int[] arrivals = new int[10];
 	     		
 	     		
-	     		// making some random drivers.
-	     	     Driver driver1 = new Driver(false,-121.9092602 ,37.3451916 ); // north
-	    	     Driver driver2 = new Driver(false,-121.8292602 ,37.3451916 ); // south
-	    	     Driver driver3 = new Driver(false,-121.8892602 ,37.3651916 ); //east 
-	    	     Driver driver4 = new Driver(false,-121.8892602 ,37.3151916 ); //west
+	     		 Driver driver1 = new Driver( "Muhammed", false,-121.8892602 ,37.3951916 ); // north
+	    	     Driver driver2 = new Driver("Jakub" , false,-121.8892602 ,37.3151916 ); // south
+	    	     Driver driver3 = new Driver( "Dustin" , false,-121.9892602 ,37.3351916 ); //east 
+	    	     Driver driver4 = new Driver( "Jeet" , false,-121.8192602 ,37.3151916 ); //west
 	    	     
-	    	     System.out.println( " Arraylist size is : " + Driver.drivers.size() );
+	    	     System.out.println( " Arraylist size is : " + Driver.drivers.size() ); // just a test 
 	     		
-
+	    	    // starts the main menu 
 	     		repeater(1);
 
 	     		// Add a Driver
-	     		Member Tim = new Member();
-	     		Tim.setStatus(2);
-	     		Tim.setAddress("1313 Like Ln San Jose CA");
-	     		//Tim.addVehicle("2010 Audi A4");
-	     		Tim.setPreference(0);
-	     		departures[0] = 800;
-	     		departures[1]  = 800;
-	     		departures[2] = 800;
-	     		departures[3]  = 800;
-	     		departures[4] = 1100;
-	     		arrivals[0] = 900;
-	     		arrivals[1] = 900;
-	     		arrivals[2] = 900;
-	     		arrivals[3] = 900;
-	     		arrivals[4] = 1200;
+//	     		Member Tim = new Member();
+//	     		Tim.setStatus(2);
+//	     		Tim.setAddress("1313 Like Ln San Jose CA");
+//	     		//Tim.addVehicle("2010 Audi A4");
+//	     		Tim.setPreference(0);
+//	     		departures[0] = 800;
+//	     		departures[1]  = 800;
+//	     		departures[2] = 800;
+//	     		departures[3]  = 800;
+//	     		departures[4] = 1100;
+//	     		arrivals[0] = 900;
+//	     		arrivals[1] = 900;
+//	     		arrivals[2] = 900;
+//	     		arrivals[3] = 900;
+//	     		arrivals[4] = 1200;
 
 	     		// Set Drivers location
 	     		RideSchedule TimsLocation = new RideSchedule();
@@ -91,6 +89,7 @@
 	     	}
 	     	public static void  repeater(int i )
 	     	{
+	     		 Caculation cal = new Caculation() ;
 
 	     		if (i == 1 )
 	     		{
@@ -98,6 +97,7 @@
 	     			System.out.println("1. Sign up");
 	     			System.out.println("2. Log in");
 	     			System.out.println("3. Exit");
+	     			System.out.println("4. make a random request");
 
 	     			Scanner reader = new Scanner(System.in);
 
@@ -169,8 +169,21 @@
 	     			else if (input == 3)
 	     			{
 	     				System.out.println("End of program!");
+	     				
+	     			} else if ( input == 4 ){ // make a random request 
+	     				System.out.println( "Please enter your X coordinte for your location:");
+	     				double x = reader.nextDouble();
+	     				System.out.println( "Please enter your Y coordinte for your location:");
+	     				double y = reader.nextDouble();
+	     				cal.randomPassengerRequest(x, y);
+	     				
+	     				
 	     			}
 	     		} 
 	     		System.out.println("End of program! ");
-	     	}
-	     }
+	     		
+	     	} // end of main menu 
+	     }// end of class
+	     
+	     
+	     
