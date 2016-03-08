@@ -40,7 +40,7 @@ public class Stops {
 	 * @param stop stop location
 	 * @param time time to be picked up
 	 */
-	public void addStop(String stop, Integer time){
+	public void addStop(String stop, List<Integer> time){
 		stops.put(stop, time);
 	}
 	

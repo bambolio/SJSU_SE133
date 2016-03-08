@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *  
  */
 
-public class Caculation {
+public class Calculation {
 
 	
 	private double centerX = -121.8832602;	// 	increasing left to right

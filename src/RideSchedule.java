@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -20,7 +21,6 @@ public class RideSchedule
 	/**
 
 	 * Empty Constructor
-
 	 */
 
 	public RideSchedule()
@@ -104,17 +104,17 @@ public class RideSchedule
 
 	 */
 
-	public void addDay(Integer date, String stop, Integer time)
-
-	{
-
-		Stops temp = new Stops(date);
-
-		temp.addStop(stop, time);
-
-		stops.add(temp);
-
-	}
+//	public void addDay(Integer date, String stop, Integer time)
+//
+//	{
+//
+//		Stops temp = new Stops(date);
+//
+//		temp.addStop(stop, time);
+//
+//		stops.add(temp);
+//
+//	}
 
 
 
@@ -131,7 +131,7 @@ public class RideSchedule
 
 	 */
 
-	public void addNewStop(Integer date, String stop, Integer time)
+	public void addNewStop(Integer date, String stop, List<Integer> time)
 
 	{
 

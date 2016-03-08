@@ -89,7 +89,7 @@ import java.util.Scanner;
 	     	}
 	     	public static void  repeater(int i )
 	     	{
-	     		 Caculation cal = new Caculation() ;
+	     		 Calculation cal = new Calculation() ;
 
 	     		if (i == 1 )
 	     		{
