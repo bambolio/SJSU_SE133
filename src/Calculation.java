@@ -17,6 +17,7 @@ public class Calculation {
 	
      Driver driver = null ;
      Notification notification = new Notification();
+     ScoopUp scoopUp = new ScoopUp( );
 
 
      
@@ -25,30 +26,33 @@ public class Calculation {
 	public String randomPassengerRequest (Double x, Double y){ // x,y location of passenger sending the request
 		
 		//System.out.println(" random request is called. ");
-		if ( Math.abs(centerX - x) < .04 &&  y > centerY ){ // passenger located north of SJSU
+		if ( centerX - x < .04 &&  y > centerY ){ // passenger located north of SJSU
 			driver = lookForDriver(x , y , "north"); 
 			//if (driver != null) // if an ideal driver was found based on location of passenger
-		    System.out.println(	notification.sendDriverNotification( x , y  )); // send passenger location to driver as a notification.
-			System.out.println(notification.sendPassengerNotification( driver));
+		    System.out.println(	 notification.sendDriverNotification( x , y  )); // send passenger location to driver as a notification.
+			System.out.println(  notification.sendPassengerNotification( driver));
+			scoopUp.repeater(1);
 			
-			
-		}else if ( Math.abs(centerX - x) < .04 &&  y < centerY ){ // passenger located south of SJSU
+		}else if ( centerX - x < .04 &&  y < centerY ){ // passenger located south of SJSU
 			driver = lookForDriver(x , y , "south" );
 			if (driver != null) // if an ideal driver was found based on location of passenger
 				 System.out.println(	notification.sendDriverNotification( x , y  )); // send passenger location to driver as a notification.
-			     System.out.println(notification.sendPassengerNotification( driver));
-			
+			     System.out.println(    notification.sendPassengerNotification( driver));
+			     scoopUp.repeater(1);
+			     
 		}else if ( Math.abs(centerY - y) < .04 &&  x > centerX ){ // passenger located east of SJSU
 			driver = lookForDriver(x , y , "east");
 			if (driver != null) // if an ideal driver was found based on location of passenger
 				 System.out.println(	notification.sendDriverNotification( x , y  )); // send passenger location to driver as a notification.
-			     System.out.println(notification.sendPassengerNotification( driver));
+			     System.out.println(    notification.sendPassengerNotification( driver));
+			     scoopUp.repeater(1);
 			
 		}else if ( Math.abs(centerY - y) < .04 &&  x < centerX ){ // passenger located south of SJSU
 			driver = lookForDriver(x , y , "west");
 			if (driver != null) // if an ideal driver was found based on location of passenger
 				 System.out.println(	notification.sendDriverNotification( x , y  )); // send passenger location to driver as a notification.
-			     System.out.println(notification.sendPassengerNotification( driver));
+			     System.out.println(    notification.sendPassengerNotification( driver));
+			     scoopUp.repeater(1);
 			
 		} 
 		
