@@ -24,12 +24,12 @@ import java.util.Scanner;
 	     		int[] arrivals = new int[10];
 	     		
 	     		
-	     		 Driver driver1 = new Driver( "Muhammed", false,-121.8892602 ,37.3951916 ); // north
-	    	     Driver driver2 = new Driver("Jakub" , false,-121.8892602 ,37.3151916 ); // south
-	    	     Driver driver3 = new Driver( "Dustin" , false,-121.9892602 ,37.3351916 ); //east 
-	    	     Driver driver4 = new Driver( "Jeet" , false,-121.8192602 ,37.3151916 ); //west
+	     		 Driver driver1 = new Driver( "Muhammed", false,-121.8892602 ,37.5051916 ); // north
+	    	     Driver driver2 = new Driver("Jakub" , false,-121.8892602 ,37.2051916 ); // south
+	    	     Driver driver3 = new Driver( "Dustin" , false,-122.0 ,37.3351916 ); //east 
+	    	     Driver driver4 = new Driver( "Jeet" , false,-122.0 ,37.3151916 ); //west
 	    	     
-	    	     System.out.println( " Arraylist size is : " + Driver.drivers.size() ); // just a test 
+	    	    // System.out.println( " Arraylist size is : " + Driver.drivers.size() ); // just a test 
 	     		
 	    	    // starts the main menu 
 	     		repeater(1);
