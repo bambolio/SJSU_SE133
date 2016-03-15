@@ -16,11 +16,6 @@ public class Driver {
 	
 	static ArrayList <Driver> drivers = new ArrayList<Driver>(); 
 	
-	
-
-
-
-
 
 	public Driver(String name , boolean leftHome, double locationX, double locationY) {
 		super();
@@ -33,7 +28,7 @@ public class Driver {
 
 	
 	public Driver() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 
@@ -123,6 +118,7 @@ public class Driver {
 		this.isDriver = isDriver;
 	}
 
+	
 
 	public String[] getDepartureTimes() {
 		// TODO Auto-generated method stub

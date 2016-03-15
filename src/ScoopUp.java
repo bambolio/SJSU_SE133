@@ -166,15 +166,17 @@ public class ScoopUp
 				System.out.println( "Please enter your Y coordinte for your location:");
 				double y = reader.nextDouble();
 				cal.randomPassengerRequest(x, y);
-
-			}else{
-				System.out.println("invalid entry!try again.");
 				repeater(1);
+				
 			}
 		} 
 
+		else{
+			System.out.println("invalid entry!try again.");
+			//repeater(1);
+		}
 
-	} // end of main menu 
+	} // end of main menu/repeater 
 
 	private static void driverQuestions() {
 
