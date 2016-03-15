@@ -8,8 +8,8 @@ public class Vehicle {
 	private String licensePlate;
 	//private Boolean isVerified;
 	//private Boolean isOperating;
-
-	/**
+     
+	/** 
 	 *  Empty constructor
 	 */
 	public Vehicle(){

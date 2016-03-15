@@ -9,6 +9,10 @@ public class Driver {
 	private String name ; 
 	private double locationX;
 	private double locationY ;
+
+	private String[] arrivalTimes = new String[5];
+	private String[] departureTimes = new String[5];
+	private int[] isDriver = new int[5];
 	
 	static ArrayList <Driver> drivers = new ArrayList<Driver>(); 
 	
@@ -97,5 +101,36 @@ public class Driver {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+	public String[] getArrivalTimes() {
+		return arrivalTimes;
+	}
+
+
+	public void setArrivalTimes(String[] arrivalTimes) {
+		this.arrivalTimes = arrivalTimes;
+	}
+
+
+	public int[] getIsDriver() {
+		return isDriver;
+	}
+
+
+	public void setIsDriver(int[] isDriver) {
+		this.isDriver = isDriver;
+	}
+
+
+	public String[] getDepartureTimes() {
+		// TODO Auto-generated method stub
+		return departureTimes;
+	}
+
+
+	public void setDepartureTimes(String[] departureTimes) {
+		this.departureTimes = departureTimes;
 	}
 }
