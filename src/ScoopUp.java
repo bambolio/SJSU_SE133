@@ -17,12 +17,19 @@ import java.util.Scanner;
 	     {
 	    
 	    	 
-	    	 
+	    	static String [] weekDays = {"monday","tuesday","wednesday","thursday","friday"} ;
+	    	
+	    	
 	     	public static void main(String [] args)
 	     	{
 	     		int[] departures = new int[10];
 	     		int[] arrivals = new int[10];
-	     		
+	     		//////////////////
+	     		Calendar calendar = Calendar.getInstance();
+	     		int day = calendar.get(Calendar.DAY_OF_WEEK);
+	     		System.out.println(" day is "+day);
+	     		//monday = 2, tuesday = 3, ..
+	     		////////////////////
 	     		
 	     		 Driver driver1 = new Driver( "Muhammed", false,-121.8892602 ,37.5051916 ); // north
 	    	     Driver driver2 = new Driver("Jakub" , false,-121.8892602 ,37.2051916 ); // south
@@ -93,7 +100,9 @@ import java.util.Scanner;
 
 	     		if (i == 1 )
 	     		{
-	     			System.out.println(".:Main Menu:.");
+	     			System.out.println("|-----------|");
+	     			System.out.println("| Main Menu |");
+	     			System.out.println("|-----------|");
 	     			System.out.println("1. Sign up");
 	     			System.out.println("2. Log in");
 	     			System.out.println("3. Exit");
@@ -165,10 +174,12 @@ import java.util.Scanner;
 	     				System.out.println("Please enter your password: ");
 	     				String pass = reader.nextLine();
 	     				System.out.println("Welcome, "+ name + "!");
+	     				repeater(1);
 	     			}
 	     			else if (input == 3)
 	     			{
-	     				System.out.println("End of program!");
+	     				System.out.println("End of program! ");
+	     				return;
 	     				
 	     			} else if ( input == 4 ){ // make a random request 
 	     				System.out.println( "Please enter your X coordinte for your location:");
@@ -176,7 +187,6 @@ import java.util.Scanner;
 	     				System.out.println( "Please enter your Y coordinte for your location:");
 	     				double y = reader.nextDouble();
 	     				cal.randomPassengerRequest(x, y);
-	     				
 	     				
 	     			}
 	     		} 
