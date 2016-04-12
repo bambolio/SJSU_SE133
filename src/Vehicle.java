@@ -1,3 +1,5 @@
+import java.awt.List;
+
 public class Vehicle {
 	private int year;
 	private String make;
@@ -6,9 +8,11 @@ public class Vehicle {
 	private int seatNumber;
 	private int parkingNumber;
 	private String licensePlate;
+	List vehicles = new List();
 	//private Boolean isVerified;
 	//private Boolean isOperating;
      
+	
 	/** 
 	 *  Empty constructor
 	 */

@@ -18,7 +18,7 @@ public class Driver {
 	
 
 	public Driver(String name , boolean leftHome, double locationX, double locationY) {
-		super();
+		//super();
 		this.leftHome = leftHome;
 		this.locationX = locationX;
 		this.locationY = locationY;
@@ -26,6 +26,12 @@ public class Driver {
 		drivers.add(this);
 	}
 
+	public Driver( String[] arr, String[]dep, int[]isDri){
+		super();
+		arrivalTimes = arr;
+		departureTimes = dep ;
+		isDriver = isDri ;
+	}
 	
 	public Driver() {
 		

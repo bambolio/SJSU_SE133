@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class ScoopUp 
 {
-
+//notify passengers that driver left, observer pattern
 
 	static String [] weekDays = {"monday","tuesday","wednesday","thursday","friday"} ;
 	static Scanner reader = new Scanner(System.in);
@@ -91,7 +91,7 @@ public class ScoopUp
 			System.out.println("2. Log in");
 			System.out.println("3. Exit");
 			System.out.println("4. make a random request");
-
+			//reader.next();
 			
 
 			Member member = new Member();
@@ -117,7 +117,7 @@ public class ScoopUp
 				System.out.println("Please enter your address: ");
 				member.setAddress(reader.nextLine());
 
-				System.out.println("Are you willing to drive for ScoopUp?");
+				System.out.println("Are you willing to drive for ScoopUp? (type 'yes', or 'no");
 				try{
 					if(reader.nextLine().equalsIgnoreCase("yes")){
 						driverQuestions();
@@ -128,23 +128,32 @@ public class ScoopUp
 				}
 
 
+			
 
 				System.out.println("Sign up Successfull!");
 
 				System.out.println("1. Return to Main Menu");
 				System.out.println("2. Exit");
-				int j = reader.nextInt();
+				//reader.nextLine();
+				int j = 0 ;
+
+				try{
+					j = Integer.parseInt(reader.nextLine());
+				}catch(Exception e){
+
+				}
 
 				if (j  == 2)
 				{
-					repeater(2);
+					repeater(3);
 				}
 				else if (j == 1)
 				{
 					repeater(1); 
 				}
+			
 			}
-
+			
 			else if (input == 2)
 			{
 				System.out.println("Please enter your name: ");
@@ -155,10 +164,11 @@ public class ScoopUp
 				System.out.println("Welcome, "+ name + "!");
 				repeater(1);
 			}
-			else if (input == 3)
+			else if (input == 3 || i == 3)
 			{
 				System.out.println("End of program! ");
 				return;
+				
 
 			} else if ( input == 4 ){ // make a random request 
 				System.out.println( "Please enter your X coordinte for your location:");
@@ -169,13 +179,13 @@ public class ScoopUp
 				repeater(1);
 				
 			}
-		} 
+		 
 
 		else{
 			System.out.println("invalid entry!try again.");
-			//repeater(1);
+			repeater(1);
 		}
-
+		}
 	} // end of main menu/repeater 
 
 	private static void driverQuestions() {
@@ -193,7 +203,7 @@ public class ScoopUp
 
 
 		System.out.println("Year: "); 
-		vehicle.setYear(reader.nextInt()); 
+		vehicle.setYear(Integer.parseInt(reader.nextLine())); 
 
 
 		System.out.println("Color: "); 
@@ -207,7 +217,7 @@ public class ScoopUp
 		Driver driver = new Driver();
 		
 		for (int i = 0 ; i < 5 ; i ++){
-			System.out.println("Do you have school on "+weekDays[i]+"?");
+			System.out.println("Do you have school on "+weekDays[i]+"? (type 'yes', or 'no'");
 			if(reader.nextLine().equalsIgnoreCase("yes") ){
 				System.out.println("what time do you need to be in school? (enter 'a' for 'am' and 'p' for 'pm')");
 				driver.getArrivalTimes()[i] = reader.nextLine();
